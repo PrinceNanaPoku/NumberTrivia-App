@@ -5,3 +5,13 @@ abstract class Failure extends Equatable {
     properties;
   }
 }
+
+class ServerFailure extends Failure {
+  @override
+  List<dynamic> get props => throw UnimplementedError();
+}
+
+class CacheFailure extends Failure {
+  @override
+  List<dynamic> get props => throw UnimplementedError();
+}
