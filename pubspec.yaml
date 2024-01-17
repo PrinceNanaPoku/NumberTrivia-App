@@ -34,6 +34,8 @@ dependencies:
   shared_preferences: ^2.2.2
  
   meta: ^1.9.1
+  internet_connection_checker: ^1.0.0+1
+  data_connection_checker_nulls: ^0.0.2
   
 
 dev_dependencies:

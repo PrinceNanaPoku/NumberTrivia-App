@@ -1,11 +1,9 @@
-import 'dart:ffi';
-
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:newapp/core/error/exceptions.dart';
 import 'package:newapp/core/error/failure.dart';
-import 'package:newapp/core/platform/network_info.dart';
+import 'package:newapp/core/network/network_info.dart';
 import 'package:newapp/features/number_trivia/data/datasources/number_trivia_local_datasource.dart';
 import 'package:newapp/features/number_trivia/data/datasources/number_trivia_remote_datasource.dart';
 import 'package:newapp/features/number_trivia/data/model/number_trivia_model.dart';
