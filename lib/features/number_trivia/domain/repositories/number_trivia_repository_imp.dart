@@ -8,7 +8,7 @@ import 'package:newapp/features/number_trivia/data/model/number_trivia_model.dar
 import 'package:newapp/features/number_trivia/domain/entities/number_trivia.dart';
 import 'package:newapp/features/number_trivia/domain/repositories/number_trivia_repository.dart';
 
-typedef Future<NumberTriviaModel> _ConcreteOrRandomNumberTrivia();
+typedef _ConcreteOrRandomNumberTrivia = Future<NumberTriviaModel> Function();
 
 class NumberTriviaRepositoryImp implements NumberTriviaRepository {
   final NumberTriviaRemoteDataSource remoteDataSource;

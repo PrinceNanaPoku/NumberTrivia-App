@@ -17,14 +17,13 @@ void main() {
     mockNumberTriviaRepository = MockNumberTriviaRepository();
     usecase = GetRandomNumberTrivia(mockNumberTriviaRepository);
   });
-  const testNumber = 1;
   final testNumberTrivia = NumberTrivia(
     text: 'test',
     number: 1,
   );
   mockNumberTriviaRepository = MockNumberTriviaRepository();
   usecase = GetRandomNumberTrivia(mockNumberTriviaRepository);
-  test('should trivia from the repository', () async {
+  test('should return trivia from the repository', () async {
     //arrange
     when(mockNumberTriviaRepository.getRandomNumberTrivia())
         .thenAnswer((_) async => Right(testNumberTrivia));
@@ -33,7 +32,7 @@ void main() {
 
     //assert
     expect(result, Right(testNumberTrivia));
-    verify(mockNumberTriviaRepository.getConcreteNumberTrivia(testNumber));
+    verify(mockNumberTriviaRepository.getRandomNumberTrivia());
     verifyNoMoreInteractions(mockNumberTriviaRepository);
   });
 }

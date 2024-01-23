@@ -20,7 +20,7 @@ final class Loaded extends NumberTriviaState {
 }
 
 final class Error extends NumberTriviaState {
-  final NumberTrivia message;
+  final String message;
 
   Error({required this.message}) : super() {
     message;
