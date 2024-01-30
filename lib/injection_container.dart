@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:data_connection_checker_nulls/data_connection_checker_nulls.dart';
 import 'package:get_it/get_it.dart';
 import 'package:newapp/core/network/network_info.dart';
@@ -17,18 +15,7 @@ import 'package:http/http.dart' as http;
 
 final sl = GetIt.instance;
 
-void init() async {
-  //! Features - Number Trivia
-  //Bloc
-
-  sl.registerFactory(
-    () => SettingsTriviaBloc(
-      getGetConcretNumberTrivia: sl(),
-      getRandomNumberTrivia: sl(),
-      inputConverter: sl(),
-    ),
-  );
-
+Future<void> init() async {
   //! Features - Number Trivia
   //Bloc
 
